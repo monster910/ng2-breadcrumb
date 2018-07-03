@@ -90,7 +90,7 @@ Hide certain routes (paths) from the breadcrumb trail using an exact url or rege
 
 To build a standalone bundle:
 
-    npm bundles
+    npm run bundles
 
 ## Running
 

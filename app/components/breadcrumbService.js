@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var BreadcrumbService = (function () {
+var BreadcrumbService = /** @class */ (function () {
     function BreadcrumbService() {
         this.routesFriendlyNames = new Map();
         this.routesFriendlyNamesRegex = new Map();
@@ -51,22 +51,22 @@ var BreadcrumbService = (function () {
     BreadcrumbService.prototype.getFriendlyNameForRoute = function (route) {
         var name;
         var routeEnd = route.substr(route.lastIndexOf('/') + 1, route.length);
-        this.routesFriendlyNames.forEach(function (value, key, map) {
+        this.routesFriendlyNames.forEach(function (value, key) {
             if (key === route) {
                 name = value;
             }
         });
-        this.routesFriendlyNamesRegex.forEach(function (value, key, map) {
+        this.routesFriendlyNamesRegex.forEach(function (value, key) {
             if (new RegExp(key).exec(route)) {
                 name = value;
             }
         });
-        this.routesWithCallback.forEach(function (value, key, map) {
+        this.routesWithCallback.forEach(function (value, key) {
             if (key === route) {
                 name = value(routeEnd);
             }
         });
-        this.routesWithCallbackRegex.forEach(function (value, key, map) {
+        this.routesWithCallbackRegex.forEach(function (value, key) {
             if (new RegExp(key).exec(route)) {
                 name = value(routeEnd);
             }
@@ -101,12 +101,12 @@ var BreadcrumbService = (function () {
         });
         return hide;
     };
+    BreadcrumbService.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    BreadcrumbService.ctorParameters = function () { return []; };
     return BreadcrumbService;
 }());
-BreadcrumbService.decorators = [
-    { type: core_1.Injectable },
-];
-/** @nocollapse */
-BreadcrumbService.ctorParameters = function () { return []; };
 exports.BreadcrumbService = BreadcrumbService;
 //# sourceMappingURL=breadcrumbService.js.map

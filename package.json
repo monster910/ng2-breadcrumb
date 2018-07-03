@@ -1,6 +1,6 @@
 {
   "name": "ngx-breadcrumb",
-  "version": "0.5.15",
+  "version": "0.5.16",
   "description": "A component that creates a breadcrumb trail for router paths",
   "scripts": {
     "start": "tsc && concurrently \"npm run ngc\" \"npm run lite\" ",
